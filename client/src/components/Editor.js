@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Codemirror from "codemirror";
 import "codemirror/lib/codemirror.css";
-import "codemirror/theme/dracula.css";
+import "codemirror/theme/ayu-dark.css";
 import "codemirror/mode/javascript/javascript";
 import "codemirror/addon/edit/closetag";
 import "codemirror/addon/edit/closebrackets";
@@ -16,7 +16,7 @@ function Editor({ socketRef, roomId, onCodeChange }) {
         document.getElementById("realtimeEditor"),
         {
           mode: { name: "javascript", json: true },
-          theme: "dracula",
+          theme: "ayu-dark",
           autoCloseTags: true,
           autoCloseBrackets: true,
           lineNumbers: true,

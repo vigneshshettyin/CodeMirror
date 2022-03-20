@@ -3,3 +3,18 @@ body {
   margin: 0px;
   background-color: #1c1e29;
 }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}

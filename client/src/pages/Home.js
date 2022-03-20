@@ -43,7 +43,7 @@ const Home = () => {
                 toast.success("New room id generated!");
               }}
               className="logo"
-              src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg"
+              src="https://res.cloudinary.com/vigneshshettyin/image/upload/v1647760691/guiaskdkwt3fo4yhpkvt.png"
               alt="React Logo"
             />
             <Input
