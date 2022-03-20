@@ -1,0 +1,101 @@
+.homePageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+.logo {
+  cursor: pointer;
+  height: 80px;
+  width: 90px;
+  margin-bottom: 30px;
+}
+
+.infoTextBelowButton {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.formWrapper {
+  background-color: #282a36;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.inputBox {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 14px;
+}
+
+.mainLabel {
+  margin-bottom: 20px;
+}
+
+footer {
+  font-size: large;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  color: #fff !important;
+}
+
+.mainWrap {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+}
+.aside {
+  background-color: #1c1e29;
+  padding: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.asideInner {
+  flex: 1;
+}
+
+.clientsList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.username {
+  margin-top: 10px;
+}
+
+.btn {
+  margin-bottom: 20px;
+}
+
+.editorWrap {
+  background-color: #fff;
+}
+
+.CodeMirror {
+  min-height: 100vh;
+  font-size: 20px;
+  line-height: 1.6;
+  padding-top: 20px;
+}
