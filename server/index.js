@@ -1,6 +1,7 @@
 const express = require("express");
 const { Server } = require("socket.io");
 const http = require("http");
+const dotenv = require("dotenv").config();
 const ACTIONS = require("./socket/Actions");
 
 const app = express();
@@ -8,6 +9,13 @@ const server = http.createServer(app);
 const io = new Server(server);
 
 const userSockerMap = {};
+
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "CodeMirror",
+    desc: "CodeMirror is a code editor implemented in JavaScript for the browser. It is mostly used for text editing in web browsers, but it can also be used to provide a code editor for other applications.",
+  });
+});
 
 function getAllConnectedClients(roomId) {
   return Array.from(io.sockets.adapter.rooms.get(roomId) || []).map(
