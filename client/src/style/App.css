@@ -105,3 +105,11 @@ footer {
   height: 50px;
   border-radius: 50%;
 }
+
+.editorSuperClass {
+  border-radius: 20px;
+}
+
+.extraOptions {
+  background-color: #212426;
+}

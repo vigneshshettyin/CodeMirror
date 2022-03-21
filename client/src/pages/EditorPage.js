@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Client from "../components/Client";
-import { Button } from "antd";
+import { Button, Select } from "antd";
 import { PaperClipOutlined, CloseCircleFilled } from "@ant-design/icons";
 import Editor from "../components/Editor";
 import { initSocket } from "../socket/socket";
@@ -18,6 +18,10 @@ const EditorPage = () => {
   const location = useLocation();
   const { roomId } = useParams();
   const reactNavigator = useNavigate();
+
+  const { Option } = Select;
+
+  const [theme, setTheme] = useState("ayu-dark");
 
   useEffect(() => {
     const init = async () => {
@@ -135,10 +139,42 @@ const EditorPage = () => {
           </Button>
         </div>
         <div className="editorWrap">
+          <div className="extraOptions">
+            <Select
+              className="selectThemeBox"
+              showSearch
+              value={theme}
+              onChange={(value) => {
+                setTheme(value);
+              }}
+              style={{ width: 200 }}
+              placeholder="Select Theme"
+              optionFilterProp="children"
+              filterOption={(input, option) =>
+                option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+              }
+              filterSort={(optionA, optionB) =>
+                optionA.children
+                  .toLowerCase()
+                  .localeCompare(optionB.children.toLowerCase())
+              }
+            >
+              <Option value="ayu-dark">Ayu Dark</Option>
+              <Option value="3024-night">3024 Night</Option>
+              <Option value="ayu-mirage">Ayu Mirage</Option>
+              <Option value="dracula">Dracula</Option>
+              <Option value="yonce">Yonce</Option>
+              <Option value="elegant">Elegant</Option>
+            </Select>
+            ,
+          </div>
+
           <Editor
+            className="editorSuperClass"
             onCodeChange={(code) => {
               codeRef.current = code;
             }}
+            theme={theme}
             roomId={roomId}
             socketRef={socketRef}
           />
